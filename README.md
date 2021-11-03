@@ -23,6 +23,7 @@
     cd jesidea.com-gatsby-netlify/
     npm run develop
     ```
+    NOTE: main branch (new master)
 
 3.  **Open the code and start customizing!**
 
