@@ -15,6 +15,12 @@
     nvm use v14.16.1
     ```
 
+    gatsby-cli@4.1.0
+    ```shell
+    npm install -g gatsby-cli
+    ```
+    
+
 2.  **Start developing.**
 
     Navigate into your new site’s directory and start it up.
