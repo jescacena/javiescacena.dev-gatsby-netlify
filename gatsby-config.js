@@ -40,5 +40,33 @@ module.exports = {
         path: `${__dirname}/blog`,
       }
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `jesidea-projects`,
+        path: `${__dirname}/jesidea-projects`,
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `jescv-experiences`,
+        path: `${__dirname}/jescv-experiences`,
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `jescv-certificates`,
+        path: `${__dirname}/jescv-certificates`,
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `inspirational`,
+        path: `${__dirname}/inspirational`,
+      }
+    },
   ],
 };

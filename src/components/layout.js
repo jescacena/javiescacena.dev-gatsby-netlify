@@ -42,6 +42,31 @@ const Layout = ({ pageTitle, children }) => {
               Blog
             </Link>
           </li>
+          <li className={navLinkItem}>
+            <Link to="/jesidea-projects" className={navLinkText}>
+              Projects
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/jescv" className={navLinkText}>
+              JESCV
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/jescv-experiences" className={navLinkText}>
+              JESCV-Experiences
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/jescv-certificates" className={navLinkText}>
+              JESCV-Certificates
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/inspirational" className={navLinkText}>
+              Inspirationals
+            </Link>
+          </li>
         </ul>
       </nav>
       <main>
