@@ -21,11 +21,11 @@ const JesCvExperiencesPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    allFile(filter: { sourceInstanceName: { eq: "jescv-experiences" } }) {
+    allFile(filter: { sourceInstanceName: { eq: "jescv-experiences" }, extension: {eq: "mdx"} }) {
       nodes {
         childMdx {
           frontmatter {
-            date(formatString: "MMMM D, YYYY")
+            start_date(formatString: "MMMM D, YYYY")
             title
           }
           id
