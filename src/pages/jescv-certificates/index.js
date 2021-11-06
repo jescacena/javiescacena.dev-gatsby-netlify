@@ -21,12 +21,14 @@ const JesCvCertificatesPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    allFile(filter: { sourceInstanceName: { eq: "jescv-certificates" } }) {
+    allFile(filter: { sourceInstanceName: { eq: "jescv-certificates" }, extension: {eq: "mdx"}}) {
       nodes {
         childMdx {
           frontmatter {
             date(formatString: "MMMM D, YYYY")
             title
+            academy
+            url_certificate
           }
           id
           slug

@@ -1,5 +1,5 @@
 import React from "react";
-import JSONData from "../../content/My-JSON-Content.json";
+import JSONData from "../../content/my-json-content.json";
 const JSONbuildtime = () => (
   <div>
     <h1>{JSONData.title}</h1>
