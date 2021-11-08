@@ -29,6 +29,7 @@ export const query = graphql`
             title
             academy
             url_certificate
+            url_course
           }
           id
           slug

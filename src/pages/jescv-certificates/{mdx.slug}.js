@@ -5,14 +5,22 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const JesCVCertificatePost = ({ data }) => {
-  const image = getImage(data.mdx.frontmatter.hero_image);
-  const heroImage = getImage(data.mdx.frontmatter.academy_image);
+  const heroImage = getImage(data.mdx.frontmatter.hero_image);
+  const academyImage = getImage(data.mdx.frontmatter.academy_image);
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <GatsbyImage image={image} alt={data.mdx.frontmatter.academy_image_alt} />
-      <GatsbyImage image={heroImage} alt={data.mdx.frontmatter.hero_image_alt} />
-      <p>{data.mdx.frontmatter.academy}</p>
+      <GatsbyImage
+        image={heroImage}
+        alt={data.mdx.frontmatter.hero_image_alt}
+      />
+
+      <a href={data.mdx.frontmatter.url_course} target="_blank">
+        <GatsbyImage
+          image={academyImage}
+          alt={data.mdx.frontmatter.academy_image_alt}
+        />
+      </a>
 
       <p>Posted: {data.mdx.frontmatter.date}</p>
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
@@ -32,6 +40,7 @@ export const query = graphql`
         date(formatString: "MMMM DD, YYYY")
         academy
         url_certificate
+        url_course
         tags
         hero_image_alt
         hero_image {
@@ -40,7 +49,11 @@ export const query = graphql`
           }
         }
         academy_image_alt
-
+        academy_image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
       }
     }
   }

@@ -14,7 +14,7 @@ const BlogPost = ({ data }) => {
         <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
       </a>
       <p>
-        <a href={data.mdx.frontmatter.url_original} target="_blank">
+        <a href={data.mdx.frontmatter.url_original}  target="_blank">
           {data.mdx.frontmatter.url_original}
         </a>
       </p>

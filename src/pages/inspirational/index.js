@@ -21,7 +21,7 @@ const InspirationalsPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    allFile(filter: { sourceInstanceName: { eq: "inspirational" } }) {
+    allFile(filter: { sourceInstanceName: { eq: "inspirational" }, extension: {eq: "mdx"} }) {
       nodes {
         childMdx {
           frontmatter {
