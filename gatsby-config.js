@@ -17,6 +17,7 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    `gatsby-plugin-mdx-source-name`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -38,35 +39,35 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/blog`,
-      }
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `jesidea-projects`,
         path: `${__dirname}/jesidea-projects`,
-      }
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `jescv-experiences`,
         path: `${__dirname}/jescv-experiences`,
-      }
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `jescv-certificates`,
         path: `${__dirname}/jescv-certificates`,
-      }
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `inspirational`,
         path: `${__dirname}/inspirational`,
-      }
+      },
     },
   ],
 };
