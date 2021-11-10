@@ -17,14 +17,14 @@ const JesideaProjectPost = ({ data }) => {
         {data.mdx.frontmatter.link_playstore ? (
           <li>
             playstore:{" "}
-            <a href={data.mdx.frontmatter.link_playstore} target="_blank">
+            <a href={data.mdx.frontmatter.link_playstore} target="_blank" rel="noreferrer">
               {data.mdx.frontmatter.link_playstore}
             </a>
           </li>
         ) : null}
         <li>
           website:{" "}
-          <a href={data.mdx.frontmatter.link_website} target="_blank">
+          <a href={data.mdx.frontmatter.link_website} target="_blank" rel="noreferrer">
             {data.mdx.frontmatter.link_website}
           </a>
         </li>

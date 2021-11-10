@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "http://jesidea.com",
+    siteUrl: "http://netlifyjesidea.com",
     title: "jesidea.com-gatsby-netlify",
   },
   plugins: [

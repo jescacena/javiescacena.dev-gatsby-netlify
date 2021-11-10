@@ -3,8 +3,7 @@ import Layout from '../components/layout'
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="jesidea.com">
-      <p>JESIDEA:COM - home</p>
+    <Layout pageTitle="landing">
       <p>
         TODO hacer una landing redireccionadora a las distintas secciones:
         cv

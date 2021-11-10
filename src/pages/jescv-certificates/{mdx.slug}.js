@@ -15,7 +15,7 @@ const JesCVCertificatePost = ({ data }) => {
         alt={data.mdx.frontmatter.hero_image_alt}
       />
 
-      <a href={data.mdx.frontmatter.url_course} target="_blank">
+      <a href={data.mdx.frontmatter.url_course} target="_blank" rel="noreferrer">
         <GatsbyImage
           image={academyImage}
           alt={data.mdx.frontmatter.academy_image_alt}
@@ -24,7 +24,7 @@ const JesCVCertificatePost = ({ data }) => {
 
       <p>Posted: {data.mdx.frontmatter.date}</p>
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
-      <a href={data.mdx.frontmatter.url_certificate} target="_blank">
+      <a href={data.mdx.frontmatter.url_certificate} target="_blank" rel="noreferrer">
         Certificate
       </a>
     </Layout>

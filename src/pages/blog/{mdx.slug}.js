@@ -10,11 +10,11 @@ const BlogPost = ({ data }) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <p>Posted: {data.mdx.frontmatter.date}</p>
-      <a href={data.mdx.frontmatter.url_original} target="_blank">
+      <a href={data.mdx.frontmatter.url_original} target="_blank" rel="noreferrer">
         <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
       </a>
       <p>
-        <a href={data.mdx.frontmatter.url_original}  target="_blank">
+        <a href={data.mdx.frontmatter.url_original}  target="_blank" rel="noreferrer">
           {data.mdx.frontmatter.url_original}
         </a>
       </p>
