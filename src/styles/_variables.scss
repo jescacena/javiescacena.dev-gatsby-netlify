@@ -1,2 +1,290 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: rgb(16, 63, 94);
+$font-stack: "Lato";
+
+// Greys
+$grey-100: hsla(0, 0%, 0%, 1);
+.fg-grey-100 {
+  color: $grey-100;
+}
+.bg-grey-100 {
+  background-color: $grey-100;
+}
+$grey80: hsla(0, 0%, 23%, 1);
+.fg-grey-80 {
+  color: $grey80;
+}
+.bg-grey-80 {
+  background-color: $grey80;
+}
+$grey60: hsla(240, 2%, 66%, 1);
+.fg-grey-60 {
+  color: $grey60;
+}
+.bg-grey-60 {
+  background-color: $grey60;
+}
+$grey40: hsla(240, 9%, 81%, 1);
+.fg-grey-40 {
+  color: $grey40;
+}
+.bg-grey-40 {
+  background-color: $grey40;
+}
+$grey20: hsla(260, 23%, 97%, 1);
+.fg-grey-20 {
+  color: $grey20;
+}
+.bg-grey-20 {
+  background-color: $grey20;
+}
+$white: hsla(0, 100%, 100%, 1);
+.fg-white {
+  color: $white;
+}
+.bg-white {
+  background-color: $white;
+}
+
+// Primary Colors
+$primary-blue-900: hsla(201, 52%, 38%, 1);
+.fg-primary-blue-900 {
+  color: $primary-blue-900;
+}
+.bg-primary-blue-900 {
+  background-color: $primary-blue-900;
+}
+$primary-blue-800: hsla(202, 49%, 43%, 0.9);
+.fg-primary-blue-800 {
+  color: $primary-blue-800;
+}
+.bg-primary-blue-800 {
+  background-color: $primary-blue-800;
+}
+$primary-blue-700: hsla(202, 49%, 43%, 0.6);
+.fg-primary-blue-700 {
+  color: $primary-blue-700;
+}
+.bg-primary-blue-700 {
+  background-color: $primary-blue-700;
+}
+$primary-blue-600: hsla(202, 49%, 43%, 0.4);
+.fg-primary-blue-600 {
+  color: $primary-blue-600;
+}
+.bg-primary-blue-600 {
+  background-color: $primary-blue-600;
+}
+$primary-blue-500: hsla(202, 49%, 43%, 0.2);
+.fg-primary-blue-500 {
+  color: $primary-blue-500;
+}
+.bg-primary-blue-500 {
+  background-color: $primary-blue-500;
+}
+
+// Accent colors - TODO
+
+// Spacing
+$measure8: 8px;
+$measure12: 12px;
+$measure14: 14px;
+$measure16: 16px;
+$measure20: 20px;
+$measure24: 24px;
+$measure30: 30px;
+$measure36: 36px;
+$measure40: 40px;
+$measure60: 60px;
+$measure72: 72px;
+
+// Fonts
+@mixin font-heading {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $measure40;
+  line-height: $measure40;
+}
+
+@mixin font-subheading {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $measure36;
+  line-height: $measure36;
+}
+
+@mixin font-paragraph-medium {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $measure16;
+  line-height: $measure24;
+}
+.font-paragraph-medium {
+  @include font-paragraph-medium;
+}
+
+@mixin font-paragraph-small {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $measure12;
+  line-height: $measure16;
+}
+.font-paragraph-small {
+  @include font-paragraph-small;
+}
+
+@mixin font-paragraph-tiny {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $measure8;
+  line-height: $measure16;
+}
+.font-paragraph-tiny {
+  @include font-paragraph-tiny;
+}
+
+@mixin font-link {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 800;
+  font-size: $measure16;
+  line-height: $measure20;
+  text-decoration-line: underline;
+  color: $grey80;
+}
+.font-link {
+  @include font-link;
+}
+
+@mixin font-pill-small {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 800;
+  font-size: $measure12;
+  line-height: $measure12;
+  // text-transform: uppercase;
+  color: $grey80;
+}
+.font-pill-small {
+  @include font-pill-small;
+}
+
+@mixin font-pill-medium {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 800;
+  font-size: $measure16;
+  line-height: $measure16;
+  text-transform: uppercase;
+}
+
+.pa-8 {
+  padding: $measure8;
+}
+.pa-14 {
+  padding: $measure14;
+}
+.pa-16 {
+  padding: $measure16;
+}
+.pa-20 {
+  padding: $measure20;
+}
+.pa-24 {
+  padding: $measure24;
+}
+.pa-30 {
+  padding: $measure30;
+}
+.pa-36 {
+  padding: $measure36;
+}
+.pa-40 {
+  padding: $measure40;
+}
+.pa-60 {
+  padding: $measure60;
+}
+.pa-72 {
+  padding: $measure72;
+}
+
+.ma-12 {
+  margin: $measure12;
+}
+.pa-12 {
+  padding: $measure12;
+}
+.ml-12 {
+  margin-left: $measure12;
+}
+.pl-12 {
+  padding-left: $measure12;
+}
+.mb-12 {
+  margin-bottom: $measure12;
+}
+.pb-12 {
+  padding-bottom: $measure12;
+}
+.mr-12 {
+  margin-right: $measure12;
+}
+.pr-12 {
+  padding-right: $measure12;
+}
+.mt-24 {
+  margin-top: $measure24;
+}
+
+// Floats
+.fn {
+  float: none;
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+// Box shadows
+.box-shadow-01 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+@mixin mobile-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 16px;
+  grid-auto-flow: row;
+}
+
+@mixin full-screen-mobile {
+  grid-column-start: 1;
+  grid-column-end: 9;
+}
+.full-screen-mobile {
+  @include full-screen-mobile;
+}
+
+/*
+Naming rules
+block-name__elem-name_mod-name_mod-val
+
+Names are written in lowercase Latin letters.
+
+Words are separated by a hyphen (-).
+
+The block name defines the namespace for its elements and modifiers.
+
+The element name is separated from the block name by a double underscore (__).
+
+The modifier name is separated from the block or element name by a single underscore (_).
+
+The modifier value is separated from the modifier name by a single underscore (_).
+
+For boolean modifiers, the value is not included in the name.*/

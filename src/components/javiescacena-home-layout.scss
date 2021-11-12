@@ -1,0 +1,28 @@
+@import "../styles/main.scss";
+
+body {
+  background-color: $primary-blue-500;
+}
+main {
+  @include mobile-layout-grid;
+  margin-top: $measure40;
+  margin-left: $measure24;
+  margin-right: $measure24;
+}
+
+h1 {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  @include font-heading;
+}
+
+h2 {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  @include font-paragraph-medium;
+}
+
+a {
+  @include font-link;
+}
+

@@ -1,0 +1,32 @@
+.social-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 0px 16px;
+  grid-auto-flow: row;
+
+  li {
+    vertical-align: middle;
+    justify-self: start;
+    align-self: center;
+  }
+}
+
+.social-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 0px 4px;
+  grid-auto-flow: row;
+  span,
+  img {
+    justify-self: center;
+    align-self: center;
+  }
+
+  .social-item__link-external {
+    align-self: center;
+  }
+  .social-item__label {
+    padding-top: 4px;
+    align-self: center;
+  }
+}
