@@ -1,10 +1,41 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as React from "react";
-import JaviEscacenaHomeLayout from '../../components/javiescacena-home-layout';
+import JaviEscacenaHomeLayout from "../../components/javiescacena-home-layout";
+import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
+import CardHome from "../../components/cardhome.component";
+import CardsCarouselHome from '../../components/cards-carousel-home.component';
 
-const IndexPage = () => {
+const UiGuidePage = () => {
   return (
     <JaviEscacenaHomeLayout>
       <h1>UI guide</h1>
+
+      <h2>CardHome</h2>
+      <CardHome
+        tag="frontend"
+        title="Simyo users online private area"
+        slug="/jescv-experiences/paradigma-simyo"
+      ></CardHome>
+
+      <h2>CardsCarouselHome</h2>
+      <CardsCarouselHome>
+        <CardHome
+          tag="frontend"
+          title="Play and learn with Busuu"
+          slug="/jescv-experiences/paradigma-busuu/"
+        ></CardHome>
+        <CardHome
+          tag="frontend"
+          title="Simyo users online private area"
+          slug="/jescv-experiences/paradigma-simyo"
+        ></CardHome>
+        <CardHome
+          tag="frontend"
+          title="Cargo transport optimizing tool for Inditex"
+          slug="/jescv-experiences/paradigma-inditex"
+        ></CardHome>
+      </CardsCarouselHome>
+
       <h2>Spacing Scale</h2>
       <ul className="spacing-palette ma-12 fn box-shadow-01 pa-12">
         <li className="fg-grey-80 mr-12">8px</li>
@@ -79,4 +110,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default UiGuidePage;

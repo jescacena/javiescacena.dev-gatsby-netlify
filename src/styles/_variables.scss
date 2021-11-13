@@ -105,12 +105,20 @@ $measure72: 72px;
   line-height: $measure40;
 }
 
-@mixin font-subheading {
+@mixin font-subheading-h2 {
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
   font-size: $measure36;
   line-height: $measure36;
+}
+
+@mixin font-subheading-h5 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 800;
+  font-size: $measure16;
+  line-height: $measure20;
 }
 
 @mixin font-paragraph-medium {
@@ -170,6 +178,16 @@ $measure72: 72px;
 }
 .font-pill-small {
   @include font-pill-small;
+}
+@mixin font-pill-xsmall {
+  font-family: Lato;
+  font-style: normal;
+  font-size: $measure8;
+  line-height: $measure8;
+  text-transform: uppercase;
+}
+.font-pill-xsmall {
+  @include font-pill-xsmall;
 }
 
 @mixin font-pill-medium {
@@ -236,8 +254,14 @@ $measure72: 72px;
 .pr-12 {
   padding-right: $measure12;
 }
+.mt-12 {
+  margin-top: $measure12;
+}
 .mt-24 {
   margin-top: $measure24;
+}
+.mt-40 {
+  margin-top: $measure40;
 }
 
 // Floats

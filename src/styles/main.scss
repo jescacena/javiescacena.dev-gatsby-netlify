@@ -19,7 +19,7 @@ h1 {
 }
 
 h2 {
-  @include font-subheading;
+  @include font-subheading-h2;
   grid-column-start: 1;
   grid-column-end: 9;
 }

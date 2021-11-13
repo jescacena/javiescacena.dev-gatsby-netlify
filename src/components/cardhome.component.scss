@@ -1,0 +1,26 @@
+@import "../styles/main.scss";
+
+.card-home {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-color: $primary-blue-900;
+  border-radius: 10px;
+  height: 125px;
+  color: $grey20;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  width: 167px;
+
+  //   display: grid;
+  //   grid-template-columns: 3fr 1fr;
+  //   gap: 0px 0px;
+  //   grid-auto-flow: row;
+}
+
+.card-home__chevron-go {
+  position: absolute;
+  bottom: $measure12;
+  right: $measure12;
+}

@@ -6,8 +6,13 @@ body {
 main {
   @include mobile-layout-grid;
   margin-top: $measure40;
-  margin-left: $measure24;
-  margin-right: $measure24;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 768px;
+  &.mobile {
+    margin-left: $measure24;
+    margin-right: $measure24;
+  }
 }
 
 h1 {
@@ -19,10 +24,15 @@ h1 {
 h2 {
   grid-column-start: 1;
   grid-column-end: 9;
-  @include font-paragraph-medium;
+  @include font-subheading-h2;
+}
+
+h5 {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  @include font-subheading-h5;
 }
 
 a {
   @include font-link;
 }
-
