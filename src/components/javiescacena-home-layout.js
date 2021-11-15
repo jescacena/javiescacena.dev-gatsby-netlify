@@ -19,7 +19,7 @@ const JaviEscacenaHomeLayout = ({ children }) => {
   `);
   return (
     <div className="container">
-      <main className={isMobile ? 'mobile' : ''}>
+      <main className={isMobile ? 'mobile' : 'desktop'}>
         {children}
       </main>
     </div>

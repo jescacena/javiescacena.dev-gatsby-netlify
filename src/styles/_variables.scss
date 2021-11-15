@@ -121,6 +121,14 @@ $measure72: 72px;
   line-height: $measure20;
 }
 
+@mixin font-subheading-h6 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 800;
+  font-size: $measure16;
+  line-height: $measure16;
+}
+
 @mixin font-paragraph-medium {
   font-family: Lato;
   font-style: normal;
@@ -285,6 +293,12 @@ $measure72: 72px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 16px;
   grid-auto-flow: row;
+}
+
+@mixin desktop-layout-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 16px;
 }
 
 @mixin full-screen-mobile {

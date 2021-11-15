@@ -3,15 +3,99 @@
 body {
   background-color: $primary-blue-500;
 }
+
+strong {
+  font-weight: 900 !important;
+}
+
 main {
-  @include mobile-layout-grid;
-  margin-top: $measure40;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 768px;
+
+  &.desktop {
+    display: flex;
+    flex-direction: row;
+    margin: $measure40 $measure40 0 $measure40;
+    height: 95vh;
+    justify-content: space-between;
+    .section-home-1,
+    .section-home-2 {
+      width: 45%;
+    }
+    .section-home-1 {
+      margin-right: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    .section-home-2 {
+      display: none;
+    }
+
+    .section-home-2-desktop {
+      display:flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .content-navigator {
+      li {
+        cursor: pointer;
+        margin-bottom: $measure12;
+        color: $primary-blue-600;
+        @include font-subheading-h6;
+
+        .line-separator {
+          -webkit-text-size-adjust: 100%;
+          line-height: 1.5;
+          font-weight: 700;
+          font-size: 12px;
+          text-transform: uppercase;
+          list-style: none;
+          --text-opacity: 1;
+          color: $primary-blue-600;
+          box-sizing: border-box;
+          border: 0 solid $primary-blue-600;
+          --bg-opacity: 1;
+          background-color: $primary-blue-600;
+          display: inline-block;
+          height: 1px;
+          margin-left: 16px;
+          margin-right: 16px;
+          margin-top: -1px;
+          width: 24px;
+          transition: all 0.2s ease-in-out;
+        }
+
+        &.active,
+        &:hover {
+          color: $primary-blue-900;
+          .line-separator {
+            width: 48px;
+            color: $primary-blue-900;
+            background-color: $primary-blue-900;
+          }
+        }
+      }
+    }
+  }
   &.mobile {
-    margin-left: $measure24;
-    margin-right: $measure24;
+    .section-home-1,
+    .section-home-2 {
+      @include mobile-layout-grid;
+      margin-top: $measure40;
+      margin-bottom: $measure40;
+      max-width: 768px;
+      margin-left: $measure24;
+      margin-right: $measure24;
+    }
+
+    .content-navigator {
+      display: none;
+    }
+
+    .section-home-2-desktop {
+      display: none;
+    }
   }
 }
 
