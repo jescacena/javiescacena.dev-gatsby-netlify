@@ -15,9 +15,9 @@ const HomePage = ({ data }) => {
   return (
     <JaviEscacenaHomeLayout>
       <div className="section-home-1">
-        <h1>Hi, I'm Javi Escacena</h1>
+        <h1 className="heading">Hi, I'm Javi Escacena</h1>
 
-        <p className="font-paragraph-medium mt-24 full-screen-mobile">
+        <p className="presentation font-paragraph-medium mt-24 full-screen-mobile">
           I’m a Programmer currently working as{" "}
           <strong>Frontend Developer</strong> for{" "}
           <a
