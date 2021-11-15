@@ -8,7 +8,7 @@ import SocialComponent from "../components/social.component";
 import { graphql, Link } from "gatsby";
 import CardsCarouselHome from "../components/cards-carousel-home.component";
 import CardHome from "../components/cardhome.component";
-import CardHomeDesktop from '../components/cardhome-desktop.component';
+import CardHomeDesktop from "../components/cardhome-desktop.component";
 
 const HomePage = ({ data }) => {
   const [contentActive, setContentActive] = React.useState("jobs");
@@ -27,9 +27,10 @@ const HomePage = ({ data }) => {
           >
             Paradigma Digital
           </a>
-          . I like exploring cutting edge frontend stuff and hybrid mobile
-          development. In development teams I am a promoter of good <strong>clean code</strong> {" "}
-          practices and efficient <strong>unit tests</strong>
+          . I like exploring cutting edge frontend stuff and cross-platform
+          mobile development. In development teams I am a promoter of good{" "}
+          <strong>clean code</strong> practices and efficient{" "}
+          <strong>unit tests</strong>
         </p>
 
         <ul className="content-navigator mt-40">
@@ -104,15 +105,18 @@ const HomePage = ({ data }) => {
         {contentActive === "jobs" &&
           data.jobxps.nodes.map((node) => (
             <CardHomeDesktop
-              tag="frontend"
+              tags={node.childMdx.frontmatter.tags}
+              date={node.childMdx.frontmatter.date}
               title={node.childMdx.frontmatter.title}
+              excerpt={node.childMdx.frontmatter.excerpt}
               slug={`/blog/${node.childMdx.slug}`}
             ></CardHomeDesktop>
           ))}
         {contentActive === "education" &&
           data.edus.nodes.map((node) => (
             <CardHomeDesktop
-              tag="frontend"
+              tags={node.childMdx.frontmatter.tags}
+              date={node.childMdx.frontmatter.date}
               title={node.childMdx.frontmatter.title}
               slug={`/blog/${node.childMdx.slug}`}
             ></CardHomeDesktop>
@@ -120,13 +124,16 @@ const HomePage = ({ data }) => {
         {contentActive === "articles" &&
           data.articles.nodes.map((node) => (
             <CardHomeDesktop
-              tag="frontend"
+              tags={node.childMdx.frontmatter.tags}
+              date={node.childMdx.frontmatter.date}
               title={node.childMdx.frontmatter.title}
               slug={`/blog/${node.childMdx.slug}`}
             ></CardHomeDesktop>
           ))}
       </section>
       {/* DESKTOP CONTENTS: end */}
+      <div className="footer-gradient"></div>
+
     </JaviEscacenaHomeLayout>
   );
 };
@@ -138,11 +145,12 @@ export const query = graphql`
         sourceInstanceName: { eq: "jescv-experiences" }
         extension: { eq: "mdx" }
       }
+      sort: {fields: childrenMdx___frontmatter___date, order: DESC}
     ) {
       nodes {
         childMdx {
           frontmatter {
-            start_date(formatString: "MMMM D, YYYY")
+            date(formatString: "MMMM D, YYYY")
             title
             tags
             excerpt
@@ -157,6 +165,7 @@ export const query = graphql`
         sourceInstanceName: { eq: "jescv-certificates" }
         extension: { eq: "mdx" }
       }
+      sort: {fields: childrenMdx___frontmatter___date, order: DESC}
     ) {
       nodes {
         childMdx {
@@ -166,6 +175,8 @@ export const query = graphql`
             academy
             url_certificate
             url_course
+            tags
+            excerpt
           }
           id
           slug
@@ -174,6 +185,7 @@ export const query = graphql`
     }
     articles: allFile(
       filter: { sourceInstanceName: { eq: "blog" }, extension: { eq: "mdx" } }
+      sort: {fields: childrenMdx___frontmatter___date, order: DESC}
     ) {
       nodes {
         childMdx {
@@ -182,6 +194,8 @@ export const query = graphql`
             title
             description
             url_original
+            tags
+            excerpt
           }
           id
           slug

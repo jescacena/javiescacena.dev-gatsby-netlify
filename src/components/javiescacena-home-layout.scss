@@ -9,12 +9,11 @@ strong {
 }
 
 main {
-
   &.desktop {
     display: flex;
     flex-direction: row;
     margin: $measure40 $measure40 0 $measure40;
-    height: 95vh;
+    height: 94vh;
     justify-content: space-between;
     .section-home-1,
     .section-home-2 {
@@ -25,6 +24,7 @@ main {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+      // position: fixed;
     }
 
     .section-home-2 {
@@ -32,9 +32,14 @@ main {
     }
 
     .section-home-2-desktop {
-      display:flex;
+      display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      width: 50%;
+      max-height: 94vh;
+      overflow: auto;
+      position: absolute;
+      right: 0;
     }
 
     .content-navigator {
@@ -45,6 +50,8 @@ main {
         @include font-subheading-h6;
 
         .line-separator {
+          position: relative;
+          top: -4px;
           -webkit-text-size-adjust: 100%;
           line-height: 1.5;
           font-weight: 700;
@@ -119,4 +126,25 @@ h5 {
 
 a {
   @include font-link;
+}
+
+.footer-gradient {
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  // --bg-opacity: 1;
+  font-family: Gothic A1, -apple-system, BlinkMacSystemFont, Helvetica Neue,
+    Arial, sans-serif;
+  font-size: 14px;
+  --text-opacity: 1;
+  color: rgba(148, 148, 149, var(--text-opacity));
+  box-sizing: border-box;
+  border: 0 solid #e2e8f0;
+  height: 32px;
+  pointer-events: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  background: linear-gradient(180deg, rgba(21, 21, 21, 0),$white);
 }

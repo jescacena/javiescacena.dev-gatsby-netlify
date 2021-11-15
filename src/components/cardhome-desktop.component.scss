@@ -1,0 +1,35 @@
+@import "../styles/main.scss";
+
+.card-home-desktop {
+  background-color: $primary-blue-800;
+  // border-radius: 10px;
+  width: 80%;
+  height: 210px;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  color: $grey20;
+  transition: all 0.2s ease-in-out;
+  .excerpt {
+    // max-width: 500px;
+  }
+  &:hover {
+    transform: scale(1.1);
+    background-color: $primary-blue-900;
+  }
+  .tag-0 {
+    color: $grey20;
+  }
+  .title {
+    font-size: 1.2rem;
+  }
+  .footer {
+    font-size: 0.9rem;
+    color: $grey20;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    .card-home-desktoop__tags-icon {
+    }
+  }
+}
