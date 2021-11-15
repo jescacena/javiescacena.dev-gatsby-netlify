@@ -13,18 +13,18 @@ main {
     display: flex;
     flex-direction: row;
     margin: $measure40 $measure72 0 $measure72;
-    height: 90vh;
+    // height: 90vh;
     justify-content: space-between;
     .section-home-1,
     .section-home-2 {
       width: 45%;
     }
     .section-home-1 {
-      margin-right: 10%;
+      position: fixed;
+      height: 90vh;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      padding: 0 40px;
 
       h1, p {
         width: 400px;
@@ -55,7 +55,7 @@ main {
       flex-direction: column;
       justify-content: flex-start;
       width: 50%;
-      max-height: 94vh;
+      // max-height: 94vh;
       overflow: auto;
       position: absolute;
       right: $measure72;

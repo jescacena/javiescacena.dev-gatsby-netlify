@@ -150,7 +150,7 @@ export const query = graphql`
       nodes {
         childMdx {
           frontmatter {
-            date(formatString: "MMMM D, YYYY")
+            date(formatString: "MMMM YYYY")
             title
             tags
             excerpt
@@ -170,7 +170,7 @@ export const query = graphql`
       nodes {
         childMdx {
           frontmatter {
-            date(formatString: "MMMM D, YYYY")
+            date(formatString: "MMMM YYYY")
             title
             academy
             url_certificate
@@ -190,7 +190,7 @@ export const query = graphql`
       nodes {
         childMdx {
           frontmatter {
-            date(formatString: "MMMM D, YYYY")
+            date(formatString: "MMMM YYYY")
             title
             description
             url_original
