@@ -1,8 +1,8 @@
 @import "../styles/main.scss";
 
 .card-home-desktop {
-      position: relative;
-
+  position: relative;
+  max-width: 600px;
   background-color: $primary-blue-800;
   // border-radius: 10px;
   width: 75%;

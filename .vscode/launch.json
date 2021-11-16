@@ -11,6 +11,7 @@
       "program": "${workspaceRoot}/node_modules/.bin/gatsby",
       "args": ["develop"],
       "runtimeArgs": ["--nolazy"],
+      "runtimeExecutable": "${env:HOME}/.nvm/versions/node/v14.16.1/bin/node",
       "console": "integratedTerminal"
     },
     {
@@ -20,6 +21,7 @@
       "program": "${workspaceRoot}/node_modules/.bin/gatsby",
       "args": ["build"],
       "runtimeArgs": ["--nolazy"],
+      "runtimeExecutable": "${env:HOME}/.nvm/versions/node/v14.16.1/bin/node",
       "console": "integratedTerminal"
     }
   ]

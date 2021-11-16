@@ -9,7 +9,25 @@ strong {
 }
 
 main {
-  &.desktop {
+  .section-home-1,
+  .section-home-2 {
+    @include mobile-layout-grid;
+    margin-top: $measure40;
+    margin-bottom: $measure40;
+    max-width: 768px;
+    margin-left: $measure24;
+    margin-right: $measure24;
+  }
+
+  .content-navigator {
+    display: none;
+  }
+
+  .section-home-2-desktop {
+    display: none;
+  }
+
+  @include desktop {
     display: flex;
     flex-direction: row;
     margin: $measure40 $measure72 0 $measure72;
@@ -26,7 +44,8 @@ main {
       flex-direction: column;
       justify-content: flex-start;
 
-      h1, p {
+      h1,
+      p {
         width: 400px;
       }
 
@@ -40,10 +59,9 @@ main {
         line-height: 1.7;
       }
       .social-section {
-        position:absolute;
-        bottom:1.5rem;
+        position: absolute;
+        bottom: 1.5rem;
       }
-
     }
 
     .section-home-2 {
@@ -62,8 +80,7 @@ main {
     }
 
     .content-navigator {
-      position:absolute;
-      bottom: 8rem;
+      display:block;
       li {
         cursor: pointer;
         margin-bottom: $measure20;
@@ -104,25 +121,6 @@ main {
           }
         }
       }
-    }
-  }
-  &.mobile {
-    .section-home-1,
-    .section-home-2 {
-      @include mobile-layout-grid;
-      margin-top: $measure40;
-      margin-bottom: $measure40;
-      max-width: 768px;
-      margin-left: $measure24;
-      margin-right: $measure24;
-    }
-
-    .content-navigator {
-      display: none;
-    }
-
-    .section-home-2-desktop {
-      display: none;
     }
   }
 }

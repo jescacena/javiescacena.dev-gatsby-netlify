@@ -15,9 +15,6 @@ const HomePage = ({ data }) => {
   const [contentActive, setContentActive] = React.useState("jobs");
   return (
     <JaviEscacenaHomeLayout>
-      <Helmet>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Helmet>
       <div className="section-home-1">
         <h1 className="heading">Hi, I'm Javi Escacena</h1>
 
@@ -71,9 +68,10 @@ const HomePage = ({ data }) => {
       {/* MOBILE CONTENTS: start */}
       <div className="section-home-2">
         <h5 className="mt-40 mb-12">Jobs Journey</h5>
-        <CardsCarouselHome>
-          {data.jobxps.nodes.map((node) => (
+        <CardsCarouselHome prefix="job">
+          {data.jobxps.nodes.map((node, index) => (
             <CardHome
+              key={`chjob-${index}`}
               tag="frontend"
               title={node.childMdx.frontmatter.title}
               slug={`/jescv-experiences/${node.childMdx.slug}`}
@@ -82,9 +80,10 @@ const HomePage = ({ data }) => {
         </CardsCarouselHome>
 
         <h5 className="mt-40 mb-12">Education Journey</h5>
-        <CardsCarouselHome>
-          {data.edus.nodes.map((node) => (
+        <CardsCarouselHome prefix="edu">
+          {data.edus.nodes.map((node, index) => (
             <CardHome
+              key={`chedu-${index}`}
               tag="frontend"
               title={node.childMdx.frontmatter.title}
               slug={`/jescv-certificates/${node.childMdx.slug}`}
@@ -92,9 +91,10 @@ const HomePage = ({ data }) => {
           ))}
         </CardsCarouselHome>
         <h5 className="mt-40 mb-12">Articles</h5>
-        <CardsCarouselHome>
-          {data.articles.nodes.map((node) => (
+        <CardsCarouselHome prefix="article">
+          {data.articles.nodes.map((node, index) => (
             <CardHome
+              key={`charticle-${index}`}
               tag="frontend"
               title={node.childMdx.frontmatter.title}
               slug={`/blog/${node.childMdx.slug}`}
@@ -107,8 +107,9 @@ const HomePage = ({ data }) => {
       {/* DESKTOP CONTENTS: start */}
       <section className="section-home-2-desktop">
         {contentActive === "jobs" &&
-          data.jobxps.nodes.map((node) => (
+          data.jobxps.nodes.map((node, index) => (
             <CardHomeDesktop
+              key={`chd-job-${index}`}
               tags={node.childMdx.frontmatter.tags}
               date={node.childMdx.frontmatter.date}
               title={node.childMdx.frontmatter.title}
@@ -117,8 +118,9 @@ const HomePage = ({ data }) => {
             ></CardHomeDesktop>
           ))}
         {contentActive === "education" &&
-          data.edus.nodes.map((node) => (
+          data.edus.nodes.map((node, index) => (
             <CardHomeDesktop
+              key={`chd-edu-${index}`}
               tags={node.childMdx.frontmatter.tags}
               date={node.childMdx.frontmatter.date}
               title={node.childMdx.frontmatter.title}
@@ -126,8 +128,9 @@ const HomePage = ({ data }) => {
             ></CardHomeDesktop>
           ))}
         {contentActive === "articles" &&
-          data.articles.nodes.map((node) => (
+          data.articles.nodes.map((node, index) => (
             <CardHomeDesktop
+              key={`chd-article-${index}`}
               tags={node.childMdx.frontmatter.tags}
               date={node.childMdx.frontmatter.date}
               title={node.childMdx.frontmatter.title}

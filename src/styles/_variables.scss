@@ -315,6 +315,12 @@ $measure72: 72px;
   @include full-screen-mobile;
 }
 
+$desktop-width: 1025px;
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
 /*
 Naming rules
 block-name__elem-name_mod-name_mod-val
