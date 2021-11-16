@@ -9,11 +9,15 @@ import { graphql, Link } from "gatsby";
 import CardsCarouselHome from "../components/cards-carousel-home.component";
 import CardHome from "../components/cardhome.component";
 import CardHomeDesktop from "../components/cardhome-desktop.component";
+import { Helmet } from "react-helmet";
 
 const HomePage = ({ data }) => {
   const [contentActive, setContentActive] = React.useState("jobs");
   return (
     <JaviEscacenaHomeLayout>
+      <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Helmet>
       <div className="section-home-1">
         <h1 className="heading">Hi, I'm Javi Escacena</h1>
 
@@ -133,7 +137,6 @@ const HomePage = ({ data }) => {
       </section>
       {/* DESKTOP CONTENTS: end */}
       <div className="footer-gradient"></div>
-
     </JaviEscacenaHomeLayout>
   );
 };
@@ -145,7 +148,7 @@ export const query = graphql`
         sourceInstanceName: { eq: "jescv-experiences" }
         extension: { eq: "mdx" }
       }
-      sort: {fields: childrenMdx___frontmatter___date, order: DESC}
+      sort: { fields: childrenMdx___frontmatter___date, order: DESC }
     ) {
       nodes {
         childMdx {
@@ -165,7 +168,7 @@ export const query = graphql`
         sourceInstanceName: { eq: "jescv-certificates" }
         extension: { eq: "mdx" }
       }
-      sort: {fields: childrenMdx___frontmatter___date, order: DESC}
+      sort: { fields: childrenMdx___frontmatter___date, order: DESC }
     ) {
       nodes {
         childMdx {
@@ -185,7 +188,7 @@ export const query = graphql`
     }
     articles: allFile(
       filter: { sourceInstanceName: { eq: "blog" }, extension: { eq: "mdx" } }
-      sort: {fields: childrenMdx___frontmatter___date, order: DESC}
+      sort: { fields: childrenMdx___frontmatter___date, order: DESC }
     ) {
       nodes {
         childMdx {
