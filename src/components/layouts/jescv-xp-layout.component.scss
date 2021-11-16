@@ -1,0 +1,39 @@
+@import "../../styles/main.scss";
+
+.container-jescv-xp {
+  width: 100%;
+  @include desktop {
+    width: 45%;
+    margin: 0 auto;
+  }
+  .back-link {
+    color: $primary-blue-800;
+    margin-left: $measure24;
+    margin-top: $measure24;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+  }
+  main {
+    @include mobile-layout-grid;
+    margin: $measure24;
+    @include desktop {
+      width: 500px;
+      display: block;
+    }
+
+    .gatsby-image-wrapper,
+    h1,
+    h3,
+    hr,
+    p {
+      grid-column-start: 1;
+      grid-column-end: 9;
+    }
+    h3 {
+      color: $grey80;
+    }
+  }
+}

@@ -1,7 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as React from "react";
-import JaviEscacenaHomeLayout from "../../components/javiescacena-home-layout";
-import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
+import JaviEscacenaHomeLayout from "../../components/layouts/javiescacena-home-layout";
 import CardHome from "../../components/cardhome.component";
 import CardsCarouselHome from '../../components/cards-carousel-home.component';
 

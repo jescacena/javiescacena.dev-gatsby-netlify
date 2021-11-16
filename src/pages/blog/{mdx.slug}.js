@@ -1,14 +1,14 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/layout";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import JesCvXpLayout from '../../components/layouts/jescv-xp-layout.component';
 
 const BlogPost = ({ data }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
 
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
+    <JesCvXpLayout pageTitle={data.mdx.frontmatter.title}>
       <p>Posted: {data.mdx.frontmatter.date}</p>
       <a href={data.mdx.frontmatter.url_original} target="_blank" rel="noreferrer">
         <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
@@ -19,7 +19,7 @@ const BlogPost = ({ data }) => {
         </a>
       </p>
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
-    </Layout>
+    </JesCvXpLayout>
   );
 };
 

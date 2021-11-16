@@ -1,5 +1,5 @@
 import * as React from "react";
-import JaviEscacenaHomeLayout from "../components/javiescacena-home-layout";
+import JaviEscacenaHomeLayout from "../components/layouts/javiescacena-home-layout";
 import { StaticImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -114,7 +114,7 @@ const HomePage = ({ data }) => {
               date={node.childMdx.frontmatter.date}
               title={node.childMdx.frontmatter.title}
               excerpt={node.childMdx.frontmatter.excerpt}
-              slug={`/blog/${node.childMdx.slug}`}
+              slug={`/jescv-experiences/${node.childMdx.slug}`}
             ></CardHomeDesktop>
           ))}
         {contentActive === "education" &&
@@ -124,7 +124,7 @@ const HomePage = ({ data }) => {
               tags={node.childMdx.frontmatter.tags}
               date={node.childMdx.frontmatter.date}
               title={node.childMdx.frontmatter.title}
-              slug={`/blog/${node.childMdx.slug}`}
+              slug={`/jescv-certificates/${node.childMdx.slug}`}
             ></CardHomeDesktop>
           ))}
         {contentActive === "articles" &&

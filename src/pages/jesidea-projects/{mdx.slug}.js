@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/layout";
+import JesCvXpLayout from "../../components/layouts/jescv-xp-layout.component"
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -8,7 +8,7 @@ const JesideaProjectPost = ({ data }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
 
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
+    <JesCvXpLayout pageTitle={data.mdx.frontmatter.title}>
       <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
 
       <p>{data.mdx.frontmatter.description}</p>
@@ -31,7 +31,7 @@ const JesideaProjectPost = ({ data }) => {
       </ul>
       <p>Posted: {data.mdx.frontmatter.date}</p>
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
-    </Layout>
+    </JesCvXpLayout>
   );
 };
 

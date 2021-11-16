@@ -1,50 +1,45 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/layout";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import JesCvXpLayout from "../../components/layouts/jescv-xp-layout.component";
+import CardJobXpInfo from "../../components/card-jobxp-info.component";
 
 const JesCVExperiencePost = ({ data }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
 
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
-      <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
+    <JesCvXpLayout pageTitle={data.mdx.frontmatter.title}>
+      {/* Title */}
+      <h1 className="mb-30">{data.mdx.frontmatter.title}</h1>
 
-      <h3>Excerpt:</h3>
-      <p>{data.mdx.frontmatter.excerpt}</p>
+      <GatsbyImage
+        image={image}
+        className="mb-30"
+        alt={data.mdx.frontmatter.hero_image_alt}
+      />
 
-      <hr />
-      <h3>Tags:</h3>
-      <p>{data.mdx.frontmatter.tags.join(", ")}</p>
+      <CardJobXpInfo
+        className="mb-30"
+        company={data.mdx.frontmatter.company}
+        companyWebsite={data.mdx.frontmatter.company_website}
+        startDate={data.mdx.frontmatter.start_date}
+        duration={data.mdx.frontmatter.duration}
+        tags={data.mdx.frontmatter.tags.join(", ")}
+      ></CardJobXpInfo>
 
-      <hr />
-      <h3>Company:</h3>
-      <a href={data.mdx.frontmatter.company_website}>
-        {data.mdx.frontmatter.company}
-      </a>
+      <h3 className="mb-30">{data.mdx.frontmatter.excerpt}</h3>
 
-      <hr />
-      <h3>Duration:</h3>
-      {data.mdx.frontmatter.duration}
-
-      <hr />
-      <p>
-        Dates: {data.mdx.frontmatter.start_date} -{" "}
-        {data.mdx.frontmatter.end_date}
-      </p>
-      <hr />
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
-      <hr />
-      <h3>Project website:</h3>
-      {data.mdx.frontmatter.project_website ? (
+      {/* project_website */}
+      {/* {data.mdx.frontmatter.project_website ? (
         <p>
           <a href={data.mdx.frontmatter.project_website}>
             {data.mdx.frontmatter.project_website}
           </a>
         </p>
-      ) : null}
-    </Layout>
+      ) : null} */}
+    </JesCvXpLayout>
   );
 };
 

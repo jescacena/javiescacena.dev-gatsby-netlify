@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/layout";
+import JesCvXpLayout from "../../components/layouts/jescv-xp-layout.component"
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -9,7 +9,7 @@ const JesCVCertificatePost = ({ data }) => {
   const academyImage = getImage(data.mdx.frontmatter.academy_image);
 
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
+    <JesCvXpLayout pageTitle={data.mdx.frontmatter.title}>
       <GatsbyImage
         image={heroImage}
         alt={data.mdx.frontmatter.hero_image_alt}
@@ -27,7 +27,7 @@ const JesCVCertificatePost = ({ data }) => {
       <a href={data.mdx.frontmatter.url_certificate} target="_blank" rel="noreferrer">
         Certificate
       </a>
-    </Layout>
+    </JesCvXpLayout>
   );
 };
 

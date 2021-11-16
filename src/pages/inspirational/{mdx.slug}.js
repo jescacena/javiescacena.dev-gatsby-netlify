@@ -1,21 +1,21 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/layout";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import JesCvXpLayout from '../../components/layouts/jescv-xp-layout.component';
 
 const JesideaInspirationalPost = ({ data }) => {
   const heroImage = getImage(data.mdx.frontmatter.hero_image);
 
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
+    <JesCvXpLayout pageTitle={data.mdx.frontmatter.title}>
       <GatsbyImage
         image={heroImage}
         alt={data.mdx.frontmatter.hero_image_alt}
       />
       <p>Posted: {data.mdx.frontmatter.date}</p>
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
-    </Layout>
+    </JesCvXpLayout>
   );
 };
 

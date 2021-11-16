@@ -24,6 +24,12 @@ h2 {
   grid-column-end: 9;
 }
 
+h3 {
+  @include font-subheading-h3;
+  grid-column-start: 1;
+  grid-column-end: 9;
+}
+
 p {
   grid-column-start: 1;
   grid-column-end: 9;
