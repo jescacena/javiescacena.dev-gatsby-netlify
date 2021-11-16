@@ -24,7 +24,7 @@ const JesideaProjectPost = ({ data }) => {
         ) : null}
         <li>
           website:{" "}
-          <a href={data.mdx.frontmatter.link_website} target="_blank" rel="noreferrer">
+          <a href={data.mdx.frontmatter.link_website} target="_blank" rel="noreferrer" >
             {data.mdx.frontmatter.link_website}
           </a>
         </li>

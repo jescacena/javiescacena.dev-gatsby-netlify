@@ -13,7 +13,7 @@ const SocialComponent = () => {
         <StaticImage
           width={36}
           height={36}
-          src="../images/jes-avatar.png"
+          src="../images/yo-julio-2020.jpg"
           alt="Javier Escacena Avatar"
         />
       </li>
