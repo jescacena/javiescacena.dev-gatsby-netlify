@@ -51,7 +51,10 @@ export const query = graphql`
         academy_image_alt
         academy_image {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(
+              width: 500
+              placeholder: BLURRED
+            )
           }
         }
       }

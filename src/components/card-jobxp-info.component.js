@@ -1,5 +1,10 @@
-import { faTags } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faTags,
+  faBuilding,
+  faUser,
+  faClock,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./card-jobxp-info.component.scss";
 
@@ -9,24 +14,41 @@ const CardJobXpInfo = ({
   company,
   companyWebsite,
   duration,
+  duties,
 }) => {
   return (
-    <div className="card-jobxp-info">
-      <a className="company" href={companyWebsite}>
-        {company}
-      </a>
-      <p className="duty">Frontend developer</p>
-      <div className="tags">
+    <div className="card-jobxp-info box-shadow-01">
+      <div className="item company mb-12">
+        <FontAwesomeIcon
+          icon={faBuilding}
+          className="mr-8"
+        />
+        <a href={companyWebsite}>{company}</a>
+      </div>
+
+      <div className="item duty mb-12">
+        <FontAwesomeIcon
+          icon={faUser}
+          className="mr-8"
+        />
+        {duties[0]}
+      </div>
+
+      <div className="item tags mb-12">
         <FontAwesomeIcon
           icon={faTags}
-          className="card-home-desktoop__tags-icon mr-8"
+          className="mr-8"
         />
         {tags}
       </div>
 
-      <p className="duration">
-        {startDate} -{duration}
-      </p>
+      <div className="item duration">
+        <FontAwesomeIcon
+          icon={faClock}
+          className="mr-8"
+        />
+        {startDate} - {duration}
+      </div>
     </div>
   );
 };

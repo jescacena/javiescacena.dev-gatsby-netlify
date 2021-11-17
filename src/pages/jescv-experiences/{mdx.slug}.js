@@ -11,7 +11,7 @@ const JesCVExperiencePost = ({ data }) => {
   return (
     <JesCvXpLayout pageTitle={data.mdx.frontmatter.title}>
       {/* Title */}
-      <h1 className="mb-30">{data.mdx.frontmatter.title}</h1>
+      <h2 className="mb-30">{data.mdx.frontmatter.title}</h2>
 
       <GatsbyImage
         image={image}
@@ -25,20 +25,13 @@ const JesCVExperiencePost = ({ data }) => {
         companyWebsite={data.mdx.frontmatter.company_website}
         startDate={data.mdx.frontmatter.start_date}
         duration={data.mdx.frontmatter.duration}
+        duties={data.mdx.frontmatter.duties}
         tags={data.mdx.frontmatter.tags.join(", ")}
       ></CardJobXpInfo>
 
-      <h3 className="mb-30">{data.mdx.frontmatter.excerpt}</h3>
+      <h4>{data.mdx.frontmatter.excerpt}</h4>
 
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
-      {/* project_website */}
-      {/* {data.mdx.frontmatter.project_website ? (
-        <p>
-          <a href={data.mdx.frontmatter.project_website}>
-            {data.mdx.frontmatter.project_website}
-          </a>
-        </p>
-      ) : null} */}
     </JesCvXpLayout>
   );
 };
@@ -53,15 +46,18 @@ export const query = graphql`
         company
         company_website
         project_website
-        start_date(formatString: "MMMM DD, YYYY")
-        end_date(formatString: "MMMM DD, YYYY")
+        start_date(formatString: "MMMM, YYYY")
+        end_date(formatString: "MMMM, YYYY")
         duration
         duties
         tags
         hero_image_alt
         hero_image {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(
+              width: 500
+              placeholder: BLURRED
+            )
           }
         }
       }
