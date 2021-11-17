@@ -4,7 +4,7 @@ import Layout from "../../components/layouts/layout";
 
 const JesCvExperiencesPage = ({ data }) => {
   return (
-    <Layout pageTitle="Jesidea Projects">
+    <Layout pageTitle="Javier Escacena - Job Experiences">
       {data.allFile.nodes.map((node) => (
         <article key={node.childMdx.id}>
           <h2>

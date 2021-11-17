@@ -1,6 +1,6 @@
 @import "../../styles/main.scss";
 
-.container-jescv-xp {
+.container-jescv-edu {
   width: 100%;
   margin-bottom: $measure60;
 
@@ -9,10 +9,11 @@
     margin: $measure24;
 
     .gatsby-image-wrapper,
+    .edu-info-section,
     h1,
     h3,
     h4,
-    hr,
+    ul,
     p {
       grid-column-start: 1;
       grid-column-end: 9;
@@ -22,14 +23,24 @@
       margin-top: $measure24;
       margin-bottom: $measure8;
     }
-  }
 
-  p,
-  h4 {
-    line-height: 1.4;
-  }
-  h2 {
-    line-height: 1.2;
+    p,
+    h4 {
+      line-height: 1.4;
+    }
+    h2 {
+      line-height: 1.2;
+    }
+
+    .edu-info-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    li {
+      margin-bottom: $measure8;
+      line-height: 1.5;
+    }
   }
 
   /* DESKTOP */

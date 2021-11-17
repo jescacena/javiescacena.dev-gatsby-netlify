@@ -32,6 +32,9 @@ const JesCVExperiencePost = ({ data }) => {
       <h4>{data.mdx.frontmatter.excerpt}</h4>
 
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
+
+      <div className="footer-nav">
+      </div>
     </JesCvXpLayout>
   );
 };
@@ -51,6 +54,7 @@ export const query = graphql`
         duration
         duties
         tags
+        index
         hero_image_alt
         hero_image {
           childImageSharp {

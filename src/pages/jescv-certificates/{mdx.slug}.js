@@ -1,33 +1,59 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import JesCvXpLayout from "../../components/layouts/jescv-xp-layout.component"
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import JesCvEduLayout from "../../components/layouts/jescv-edu-layout.component";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkAlt, faClock } from "@fortawesome/free-solid-svg-icons";
 
 const JesCVCertificatePost = ({ data }) => {
   const heroImage = getImage(data.mdx.frontmatter.hero_image);
   const academyImage = getImage(data.mdx.frontmatter.academy_image);
 
   return (
-    <JesCvXpLayout pageTitle={data.mdx.frontmatter.title}>
+    <JesCvEduLayout pageTitle={data.mdx.frontmatter.title}>
+      <h2 className="mb-30">{data.mdx.frontmatter.title}</h2>
+
       <GatsbyImage
         image={heroImage}
+        className="mb-30 box-shadow-01"
         alt={data.mdx.frontmatter.hero_image_alt}
       />
 
-      <a href={data.mdx.frontmatter.url_course} target="_blank" rel="noreferrer">
-        <GatsbyImage
-          image={academyImage}
-          alt={data.mdx.frontmatter.academy_image_alt}
-        />
-      </a>
+      <div className="edu-info-section">
+        <a
+          href={data.mdx.frontmatter.url_course}
+          target="_blank"
+          rel="noreferrer"
+          className="learning-entity mb-30"
+        >
+          {data.mdx.frontmatter.academy}
+          <FontAwesomeIcon
+            icon={faExternalLinkAlt}
+            size="1x"
+            className="back-link__icon ml-8"
+          />
+        </a>
 
-      <p>Posted: {data.mdx.frontmatter.date}</p>
+        <div className="mb-30">
+          <FontAwesomeIcon
+            icon={faClock}
+            size="1x"
+            className="back-link__icon mr-8"
+          />
+          {data.mdx.frontmatter.date}
+        </div>
+      </div>
+
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
-      <a href={data.mdx.frontmatter.url_certificate} target="_blank" rel="noreferrer">
+      {/* <a
+        href={data.mdx.frontmatter.url_certificate}
+        target="_blank"
+        rel="noreferrer"
+      >
         Certificate
-      </a>
-    </JesCvXpLayout>
+      </a> */}
+    </JesCvEduLayout>
   );
 };
 
@@ -45,16 +71,16 @@ export const query = graphql`
         hero_image_alt
         hero_image {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(
+              width: 500
+              placeholder: BLURRED
+            )
           }
         }
         academy_image_alt
         academy_image {
           childImageSharp {
-            gatsbyImageData(
-              width: 500
-              placeholder: BLURRED
-            )
+            gatsbyImageData(width: 500, placeholder: BLURRED)
           }
         }
       }
