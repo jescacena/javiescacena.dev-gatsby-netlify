@@ -151,7 +151,7 @@ export const query = graphql`
         sourceInstanceName: { eq: "jescv-experiences" }
         extension: { eq: "mdx" }
       }
-      sort: { fields: childrenMdx___frontmatter___date, order: DESC }
+      sort: { fields: childrenMdx___frontmatter___index, order: DESC }
     ) {
       nodes {
         childMdx {

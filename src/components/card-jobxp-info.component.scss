@@ -3,31 +3,22 @@
 .card-jobxp-info {
   grid-column-start: 1;
   grid-column-end: 9;
-  background-color: $primary-blue-600;
+  background-color: $primary-blue-500;
   // border: 1px solid $primary-blue-700;
   border-radius: 10px;
   padding: 12px;
-  color: $grey20;
+  color: $primary-blue-900;
   margin-bottom: $measure30;
   font-size: 0.9rem;
 
   display: flex;
   flex-direction: column;
 
-  @include desktop {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 12px;
-    grid-row-gap: 12px;
-    padding: 16px 24px;
-  }
-
   .company {
     grid-area: 1 / 1 / 2 / 3;
-    color: $grey20;
+    color: $primary-blue-900;
     a {
-      color: $grey20;
+      color: $primary-blue-900;
     }
   }
   .duty {
@@ -46,5 +37,16 @@
     flex-wrap: wrap;
   }
 
-
+  /* DESKTOP */
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+    padding: 16px 24px;
+    .duration {
+      justify-self: flex-start;
+    }
+  }
 }

@@ -3,10 +3,6 @@
 .container-jescv-xp {
   width: 100%;
   margin-bottom: $measure60;
-  @include desktop {
-    width: 45%;
-    margin: 0 auto;
-  }
   .back-link {
     color: $primary-blue-800;
     margin-left: $measure24;
@@ -20,10 +16,6 @@
   main {
     @include mobile-layout-grid;
     margin: $measure24;
-    @include desktop {
-      width: 500px;
-      display: block;
-    }
 
     .gatsby-image-wrapper,
     h1,
@@ -47,5 +39,15 @@
   }
   h2 {
     line-height: 1.2;
+  }
+
+  /* DESKTOP */
+  @include desktop {
+    width: 45%;
+    margin: 0 auto;
+    main {
+      width: 500px;
+      display: block;
+    }
   }
 }

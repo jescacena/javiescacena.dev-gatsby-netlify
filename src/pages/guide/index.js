@@ -1,11 +1,11 @@
 import * as React from "react";
-import JaviEscacenaHomeLayout from "../../components/layouts/javiescacena-home-layout";
 import CardHome from "../../components/cardhome.component";
-import CardsCarouselHome from '../../components/cards-carousel-home.component';
+import CardsCarouselHome from "../../components/cards-carousel-home.component";
+import Layout from "../../components/layouts/layout";
 
 const UiGuidePage = () => {
   return (
-    <JaviEscacenaHomeLayout>
+    <React.Fragment>
       <h1>UI guide</h1>
 
       <h2>CardHome</h2>
@@ -103,8 +103,7 @@ const UiGuidePage = () => {
         </li>
       </ul>
 
-      <h2>Cards</h2>
-    </JaviEscacenaHomeLayout>
+    </React.Fragment>
   );
 };
 

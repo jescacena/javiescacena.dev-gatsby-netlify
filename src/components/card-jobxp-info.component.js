@@ -17,7 +17,7 @@ const CardJobXpInfo = ({
   duties,
 }) => {
   return (
-    <div className="card-jobxp-info box-shadow-01">
+    <div className="card-jobxp-info box-shadow-blue">
       <div className="item company mb-12">
         <FontAwesomeIcon
           icon={faBuilding}
