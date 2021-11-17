@@ -26,13 +26,13 @@ const CardJobXpInfo = ({
         <a href={companyWebsite}>{company}</a>
       </div>
 
-      <div className="item duty mb-12">
+      {duties && <div className="item duty mb-12">
         <FontAwesomeIcon
           icon={faUser}
           className="mr-8"
         />
         {duties[0]}
-      </div>
+      </div>}
 
       <div className="item tags mb-12">
         <FontAwesomeIcon
