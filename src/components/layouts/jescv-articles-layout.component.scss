@@ -1,35 +1,34 @@
 @import "../../styles/main.scss";
 
-.container-jescv-xp {
+.container-jescv-article {
   width: 100%;
   margin-bottom: $measure60;
-
   main {
     @include mobile-layout-grid;
     margin: $measure24;
-
     .gatsby-image-wrapper,
+    .container-jescv-article__external-link,
+    .edu-info-section,
+    .container-jescv-article__image,
     h1,
     h3,
     h4,
-    hr,
+    ul,
     p {
       grid-column-start: 1;
       grid-column-end: 9;
     }
-    h3 {
-      color: $grey80;
-      margin-top: $measure24;
-      margin-bottom: $measure8;
-    }
-  }
 
-  p,
-  h4 {
-    line-height: 1.4;
-  }
-  h2 {
-    line-height: 1.2;
+    .container-jescv-article__image {
+      display: block;
+    }
+    p,
+    h4 {
+      line-height: 1.4;
+    }
+    h2 {
+      line-height: 1.2;
+    }
   }
 
   /* DESKTOP */
@@ -37,7 +36,7 @@
     width: 30%;
     margin: 0 auto;
     main {
-      // width: 500px;
+      //   width: 500px;
       display: block;
     }
   }
