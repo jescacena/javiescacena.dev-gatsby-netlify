@@ -9,8 +9,6 @@ strong {
 }
 
 main {
-  max-width: 1440px;
-  margin: 0 auto;
   .section-home-1,
   .section-home-2 {
     @include mobile-layout-grid;
@@ -32,7 +30,8 @@ main {
   @include desktop {
     display: flex;
     flex-direction: row;
-    margin: $measure40 $measure72 0 $measure72;
+    max-width: 1440px;
+    margin: 0 auto;
     // height: 90vh;
     justify-content: space-between;
     .section-home-1,
