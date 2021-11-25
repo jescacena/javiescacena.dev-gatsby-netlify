@@ -9,6 +9,8 @@ strong {
 }
 
 main {
+  max-width: 1440px;
+  margin: 0 auto;
   .section-home-1,
   .section-home-2 {
     @include mobile-layout-grid;
@@ -80,7 +82,7 @@ main {
     }
 
     .content-navigator {
-      display:block;
+      display: block;
       li {
         cursor: pointer;
         margin-bottom: $measure20;
