@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  JESIDEA.COM Gastby Netlify
+  JAVIESCACENA.DEV Gastby Netlify
 </h1>
 
 ## Requirements
@@ -26,7 +26,7 @@
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd jesidea.com-gatsby-netlify/
+    cd javiescacena.dev-gatsby-netlify/
     npm run develop
     ```
     NOTE: main branch (new master)
