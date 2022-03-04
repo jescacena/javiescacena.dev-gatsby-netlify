@@ -134,6 +134,7 @@ const HomePage = ({ data }) => {
               tags={node.childMdx.frontmatter.tags}
               date={node.childMdx.frontmatter.date}
               title={node.childMdx.frontmatter.title}
+              excerpt={node.childMdx.frontmatter.excerpt}
               slug={`/blog/${node.childMdx.slug}`}
             ></CardHomeDesktop>
           ))}
