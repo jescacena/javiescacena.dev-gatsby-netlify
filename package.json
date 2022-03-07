@@ -8,11 +8,16 @@
     "gatsby"
   ],
   "scripts": {
+    "predevelop": "gatsby clean",
     "develop": "gatsby develop",
+    "prestart": "gatsby clean",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "cypress:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "start-server-and-test start http://localhost:8000 cy:run"
   },
   "dependencies": {
     "@fontsource/lato": "^4.5.0",
@@ -43,6 +48,9 @@
     "sass": "^1.43.4"
   },
   "devDependencies": {
-    "netlify-cli": "^9.12.3"
+    "cypress": "^9.5.1",
+    "husky": "^7.0.4",
+    "netlify-cli": "^9.12.3",
+    "start-server-and-test": "^1.14.0"
   }
 }
