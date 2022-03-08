@@ -67,8 +67,8 @@ const HomePage = ({ data }) => {
       </div>
       {/* MOBILE CONTENTS: start */}
       <div className="section-home-2">
-        <h5 className="mt-40 mb-12">Jobs Journey</h5>
-        <CardsCarouselHome prefix="job">
+        <h5 className="mt-40 mb-12 jobs-heading">Jobs Journey</h5>
+        <CardsCarouselHome prefix="job" >
           {data.jobxps.nodes.map((node, index) => (
             <CardHome
               key={`chjob-${index}`}
@@ -79,7 +79,7 @@ const HomePage = ({ data }) => {
           ))}
         </CardsCarouselHome>
 
-        <h5 className="mt-40 mb-12">Education Journey</h5>
+        <h5 className="mt-40 mb-12 edu-heading">Education Journey</h5>
         <CardsCarouselHome prefix="edu">
           {data.edus.nodes.map((node, index) => (
             <CardHome
@@ -90,7 +90,7 @@ const HomePage = ({ data }) => {
             ></CardHome>
           ))}
         </CardsCarouselHome>
-        <h5 className="mt-40 mb-12">Articles</h5>
+        <h5 className="mt-40 mb-12 article-heading">Articles</h5>
         <CardsCarouselHome prefix="article">
           {data.articles.nodes.map((node, index) => (
             <CardHome
