@@ -12,7 +12,7 @@
 1.  **Node Version**
 
     ```shell
-    nvm use v14.16.1
+    nvm use v16.13.0
     ```
 
     gatsby-cli@4.1.0
@@ -27,7 +27,7 @@
 
     ```shell
     cd javiescacena.dev-gatsby-netlify/
-    npm run develop
+    netlify dev
     ```
     NOTE: main branch (new master)
 
@@ -36,3 +36,19 @@
     Your site is now running at http://localhost:8000!
 
     Edit `src/pages/index.js` to see your site update in real-time!
+
+4. **Build**
+
+```
+netlify build
+```
+
+5. **Deploy to draft**
+```
+netlify deploy
+```
+
+6. **Deploy to prod**
+```
+netlify deploy --prod
+```
